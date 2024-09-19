@@ -1,0 +1,27 @@
+#logo
+{
+    width: 250px;
+    height: 250px;
+}
+header
+{
+    display: flex;
+    text-align: center;
+}
+.titleandsub
+{
+    text-align: center;
+}
+nav > ul
+{
+    list-style: none;
+    display: flex;
+}
+nav > ul > li
+{
+    padding: 10px;
+}
+header#uslugi
+{
+    flex-direction: column;
+}
