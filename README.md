@@ -1,2 +1,2 @@
 # mechanika-przypadku.github.io
-Projekt strony serwisu samochodowego na PPPA
+troche naprawimy troche zepsujemy ahh mechanik
