@@ -23,7 +23,7 @@
                     <li><a href="index.html">Strona Główna</a></li>
                     <li><a href="uslugi.html">Usługi</a></li>
                     <li><a href="klienci.html">Zadowoleni Klienci</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,59 +39,67 @@
             <section>
                 <p><strong>Naprawa silnika</strong> Cena:  1500 zł</p>
                 <p>Diagnoza problemów z silnikiem, wymiana uszkodzonych części (np. pierścieni, uszczelek).</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga0"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
             <br>
             <section>
                 <p><strong>Wymiana oleju</strong> Cena: 400 PLN</p>
                 <p>Wymiana oleju silnikowego oraz filtrów, co jest kluczowe dla prawidłowego funkcjonowania silnika.</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga1"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
             <section>
                 <p><strong>Naprawa układu hamulcowego</strong> Cena: 500 PLN</p>
                 <p>Wymiana klocków hamulcowych, tarcz, płynów hamulcowych, kontrola układu hamulcowego.</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga2"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
             <section>
                 <p><strong>Wymiana opon</strong> Cena: 150 PLN</p>
                 <p>Sezonowa wymiana opon, wyważanie, kontrola stanu ogumienia.</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga3"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
             <section>
                 <p><strong>Diagnostyka komputerowa</strong> Cena: 150 PLN</p>
                 <p> Sprawdzanie błędów elektronicznych, diagnostyka układów elektronicznych pojazdu.</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga4"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
             <section>
                 <p><strong>Naprawa zawieszenia</strong> Cena: 1000 PLN</p>
                 <p> Wymiana amortyzatorów, sprężyn, sworzni, co wpływa na komfort jazdy.</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga5"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
             <section>
                 <p><strong>Usługi blacharskie</strong> Cena: 2500 PLN</p>
                 <p> Naprawa wgnieceń, wymiana uszkodzonych elementów nadwozia, lakierowanie.</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga6"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
             <section>
                 <p><strong>Serwis klimatyzacji</strong> Cena: 300 PLN</p>
                 <p> Napełnianie klimatyzacji, czyszczenie układu, usuwanie zapachów i naprawa usterek.</p>
-                <p>Wybierz ilość: <input type="number" value="0"></p>
-                <button>Dodaj do koszyka</button>
+                <p>Wybierz ilość: <input type="number" value="0" id="usluga7"></p>
+                <button onclick="checkoutCalc()">Dodaj do koszyka</button>
             </section>
 
-            <section>Twój koszyk:
+            <section>
+            <h2>Twój koszyk:</h2>
             <div id="wypisanieuslog">
-
+                <p>Naprawa silnika: <span id="wypis0">0</span> szt = <span id="cena0">0</span> zł</p>
+                <p>Wymiana oleju: <span id="wypis1">0</span> szt = <span id="cena1">0</span> zł</p>
+                <p>Naprawa układu hamulcowego: <span id="wypis2">0</span> szt = <span id="cena2">0</span> zł</p>
+                <p>Wymiana opon: <span id="wypis3">0</span> szt = <span id="cena3">0</span> zł</p>
+                <p>Diagnostyka komputerowa: <span id="wypis4">0</span> szt = <span id="cena4">0</span> zł</p>
+                <p>Naprawa zawieszenia: <span id="wypis5">0</span> szt = <span id="cena5">0</span> zł</p>
+                <p>Usługi blacharskie: <span id="wypis6">0</span> szt = <span id="cena6">0</span> zł</p>
+                <p>Serwis klimatyzacji: <span id="wypis7">0</span> szt = <span id="cena7">0</span> zł</p>
             </div>
 
-            <h3 id="lacznie">Łącznie :</h3>
+            <h3>Łącznie: <span id="lacznie">0</span>zł</h3>
             </section>
         </article>
     </main>
