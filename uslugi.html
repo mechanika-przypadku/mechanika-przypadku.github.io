@@ -88,18 +88,13 @@
 
             <section>
             <h2>Twój koszyk:</h2>
-            <div id="wypisanieuslog">
-                <p>Naprawa silnika: <span id="wypis0">0</span> szt = <span id="cena0">0</span> zł</p>
-                <p>Wymiana oleju: <span id="wypis1">0</span> szt = <span id="cena1">0</span> zł</p>
-                <p>Naprawa układu hamulcowego: <span id="wypis2">0</span> szt = <span id="cena2">0</span> zł</p>
-                <p>Wymiana opon: <span id="wypis3">0</span> szt = <span id="cena3">0</span> zł</p>
-                <p>Diagnostyka komputerowa: <span id="wypis4">0</span> szt = <span id="cena4">0</span> zł</p>
-                <p>Naprawa zawieszenia: <span id="wypis5">0</span> szt = <span id="cena5">0</span> zł</p>
-                <p>Usługi blacharskie: <span id="wypis6">0</span> szt = <span id="cena6">0</span> zł</p>
-                <p>Serwis klimatyzacji: <span id="wypis7">0</span> szt = <span id="cena7">0</span> zł</p>
+            <div id="koszyk">
+                <p>Koszyk jest pusty.</p>
             </div>
 
             <h3>Łącznie: <span id="lacznie">0</span>zł</h3>
+            <button onclick="checkoutContinue()">Dalej</button>
+            <button onclick="checkoutClear()">Wyczyść koszyk</button>
             </section>
         </article>
     </main>

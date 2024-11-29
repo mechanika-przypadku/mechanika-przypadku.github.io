@@ -1,7 +1,22 @@
+let pustyKoszyk = true;
+
 function checkoutCalc()
 {
+    let koszyk = document.getElementById('koszyk');
+    koszyk.innerHTML = '';
+
     let uslugi = [0, 0, 0, 0, 0, 0, 0, 0];
     let ilosc = [0, 0, 0, 0, 0, 0, 0, 0];
+    let nazwaUslugi = [
+        "Naprawa silnika",
+        "Wymiana oleju",
+        "Naprawa układu hamulcowego",
+        "Wymiana opon",
+        "Diagnostyka komputerowa",
+        "Naprawa zawieszenia",
+        "Usługi blacharskie",
+        "Serwis klimatyzacji"
+    ]
 
     for (let i = 0; i <= 7; i++)
     {
@@ -52,12 +67,57 @@ function checkoutCalc()
 
     for (let i = 0; i <= 7; i++)
     {
-        document.getElementById(`wypis${i}`).innerHTML = ilosc[i];
-        document.getElementById(`cena${i}`).innerHTML = uslugi[i];
+        if (ilosc[i] > 0)
+        {
+            const item = document.createElement('p');
+            const itemContent = 
+            document.createTextNode(ilosc[i] + " x " + nazwaUslugi[i] + " = " + uslugi[i] + "zł");
+            item.appendChild(itemContent);
+            koszyk.appendChild(item);
+        }
 
         lacznie += uslugi[i];
     }
 
+    if (!koszyk.innerHTML)
+    {
+        const pusty = document.createElement('p');
+        const pustyContent = document.createTextNode("Koszyk jest pusty.");
+        pusty.appendChild(pustyContent);
+        koszyk.appendChild(pusty);
+
+        pustyKoszyk = true;
+    } else
+    {
+        pustyKoszyk = false;
+    }
+
     document.getElementById('lacznie').innerHTML = lacznie;
 
+}
+function checkoutClear()
+{
+    for (let i = 0; i <= 7; i++)
+    {
+        document.getElementById(`usluga${i}`).value = 0;
+    }
+    checkoutCalc();
+}
+function checkoutContinue()
+{
+    if (pustyKoszyk)
+    {
+        alert("Twój koszyk jest pusty.");
+        return;
+    }
+
+    let numer = prompt("Podaj numer telefonu do kontaktu:");
+
+    if (!numer || numer.length != 9 || isNaN(parseInt(numer)))
+    {
+        alert("Spróbuj ponownie");
+    } else
+    {
+        alert("Dziękujemy!\nNasz zespół skontaktuje się z tobą w ciągu \uFFFD dni.");
+    }
 }
