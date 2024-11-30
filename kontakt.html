@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mechanika Przypadku</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -34,27 +33,27 @@
             <section>
                 <header><h2>Kontakt</h2></header>
                 <p></p>
-                Podaj swoje imie i nazwisko<input type="text" placeholder="imie i nazwisko"><br>
-                Podaj Twój numer kontaktowy<input type="number" placeholder="numer "><br>
-                Podaj swojego e-maila<input type="email" placeholder="e-mail"><br>
-                Napisz wiadomosc do nas<input type="text" placeholder="napisz do nas wiadomosc"><br>
-                <button type="button" >Wyślij</button>
+                Imię i nazwisko:<input type="text" placeholder="Podaj imię i nazwisko" id="clientname">
+                <p id="errorname"></p><br>
+                Numer kontaktowy:<input type="number" placeholder="Podaj numer kontaktowy" id="clientnumber">
+                <p id="errornumber"></p><br>
+                Adres e-mail:<input type="email" placeholder="Podaj adres e-mail" id="clientemail">
+                <p id="erroremail"></p><br>
+                Wiadomość:<input type="text" placeholder="Napisz wiadomosc do nas" id="clientmsg">
+                <p id="errormsg"></p><br>
+                <button type="button" onclick="kontaktSend()">Wyślij</button>
             </section>
             <br>
-            <section>
-                <strong>Tu se wymyślicie co będzie</strong>
-            </section>
         </article>
     </main>
     <br>
     <footer>
-        <strong>Tu będzie footer</strong>
         <p>
             Marcin Smyk<br>
             Patryk Polita<br>
             Mateusz Józiak
         </p>
     </footer>
-    
+<script src="script.js"></script>
 </body>
 </html>

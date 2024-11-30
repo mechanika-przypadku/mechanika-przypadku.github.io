@@ -142,7 +142,6 @@ h3 {
     margin-top: 10px;
 }
 
-/* Slideshow i placeholdery */
 strong {
     display: block;
     text-align: center;
@@ -185,4 +184,83 @@ footer p {
     main {
         padding: 10px;
     }
+}
+
+/* Slideshow */
+
+.slideshow { 
+    margin: 0 auto; 
+    max-width: 1920px; 
+    width: 100%; 
+    height: 450px; 
+    text-align: center; 
+    z-index: 0;
+}
+
+.baner { 
+    padding-left: 0; 
+    width: 100%; 
+    height: 450px; 
+    position: relative;
+    z-index: 0; 
+    overflow: hidden;
+}
+
+.baner li { 
+    list-style: none; 
+}
+
+.baner li a { 
+    display: block; 
+    max-width: 1920px; 
+    width: 100%; 
+    height: 450px; 
+    position: absolute;
+    z-index: 1; 
+}
+
+.baner li span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 20s ease infinite 0s;
+}
+
+.baner li:nth-child(1) span {
+    background-image: url(img/slideshow1.jpg);
+}
+
+.baner li:nth-child(2) span {
+    background-image: url(img/slideshow2.jpg);
+    animation-delay: 5s; 
+}
+
+.baner li:nth-child(3) span {
+    background-image: url(img/slideshow3.jpg);
+    animation-delay: 10s; 
+}
+
+.baner li:nth-child(4) span {
+    background-image: url(img/slideshow4.jpg);
+    animation-delay: 15s;
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; }
+    13% { opacity: 1; }
+    25% { opacity: 1; }
+    37% { opacity: 0; }
+    100% { opacity: 0; }
+}
+#errorname, #errornumber, #erroremail, #errormsg
+{
+    color: red;
+    font-size: 15px;
 }
