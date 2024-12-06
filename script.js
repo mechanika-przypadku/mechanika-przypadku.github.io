@@ -246,10 +246,7 @@ async function kontaktSend() {
     if (response.ok) {
       alert('Otrzymaliśmy twoją wiadomość.');
 
-        document.GetElementById('clientname').value = '';
-        document.GetElementById('clientnumber').value = '';
-        document.GetElementById('clientemail').innerHTML = '';
-        document.GetElementById('clientmsg').innerHTML = '';
+        location.reload();
     } else {
       alert('Wystąpił jakiś problem.\nSpróbuj ponownie.');
     }
