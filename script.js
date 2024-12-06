@@ -248,4 +248,9 @@ async function kontaktSend() {
     } else {
       alert('Wystąpił jakiś problem.\nSpróbuj ponownie.');
     }
+
+name = "";
+number = "";
+email = "";
+msg = "";
 }
